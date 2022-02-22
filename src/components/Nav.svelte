@@ -1,6 +1,12 @@
 <script>
+	import { isActive } from '@roxi/routify';
+	import { url } from '@roxi/routify';
 	import NavTab from './NavTab.svelte';
 
+    const tabs = [
+        {name: "Home", link: "./"},
+        {name: "Login", link: "./login"}
+    ]
 </script>
 
 <style>
@@ -19,6 +25,7 @@
 </style>
 
 <ul>
-    <li><NavTab href="/">Home</NavTab></li>
-    <li><NavTab href="/login">Login</NavTab></li>
+    {#each tabs as tab}
+        <li><NavTab href={$url(tab.link)} active={$isActive(tab.link)}>{tab.name}</NavTab></li>
+    {/each}
 </ul>

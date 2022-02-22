@@ -1,10 +1,12 @@
 <script>
+	import { goto } from '@roxi/routify';
     import { login } from '../js/login'
 
     let username, password, login_status
 
     function handleSubmit() {
         login_status = login(username, password)
+        $goto("/")
     }
 </script>
 

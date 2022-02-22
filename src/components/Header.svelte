@@ -51,7 +51,9 @@
                 <Nav />
             </td>
             <td>
-                <div class="menu-account">Login</div>
+                <div class="menu-account">
+                    <a href="/login">Login</a>
+                </div>
             </td>
         </tr>
     </table>

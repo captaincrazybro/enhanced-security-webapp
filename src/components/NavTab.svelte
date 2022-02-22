@@ -1,5 +1,6 @@
 <script>
-    export let href
+    export let href, active
+    console.log(active)
 </script>
 
 <style>
@@ -13,12 +14,16 @@
         background-color: #2954ac;
     }
 
+    .nav-tab.active {
+        background-color: #244b99;
+    }
+
     .nav-tab a {
         color: white;
         text-decoration: none;
     }
 </style>
 
-<div class="nav-tab">
+<div class="nav-tab" class:active="{active}">
     <a href={href}><slot /></a>
 </div>
