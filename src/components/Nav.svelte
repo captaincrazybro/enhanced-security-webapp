@@ -1,10 +1,9 @@
 <script>
-	import { isActive } from '@roxi/routify';
-	import { url } from '@roxi/routify';
+	import { isActive, url } from '@roxi/routify';
 	import NavTab from './NavTab.svelte';
 
     const tabs = [
-        {name: "Home", link: "./"},
+        {name:   "Home", link: "./index"},
         {name: "Login", link: "./login"}
     ]
 </script>

@@ -6,7 +6,7 @@
 
     function handleSubmit() {
         login_status = login(username, password)
-        $goto("/")
+        if (login_status.success) $goto("/")
     }
 </script>
 
